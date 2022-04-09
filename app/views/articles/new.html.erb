@@ -1,0 +1,10 @@
+<div class="banner">
+  <h2><%= link_to 'Wikinimous', articles_path %></h2>
+  <%= link_to 'New Article', new_article_path %>
+</div>
+
+<%= simple_form_for(@article) do |a| %>
+  <%= a.input :title %>
+  <%= a.input :content %>
+  <%= a.submit %>
+<% end %>
