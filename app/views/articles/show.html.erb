@@ -1,13 +1,18 @@
-<div class="banner">
+<div class="navbar bg-light">
   <h2><%= link_to 'Wikinimous', articles_path %></h2>
   <%= link_to 'New Article', new_article_path %>
 </div>
-<h1><%= @article.title %>
-<%= link_to(edit_article_path) do %>
-  <i class="fas fa-pencil-alt"></i>
-<% end %>
-<%= link_to article_path, method: :delete, data: { confirm: "Are you sure?" } do %>
-  <i class="fas fa-trash"></i>
-<% end %>
-</h1>
-<p><%= @article.content %></p>
+
+<div class="container">
+  <div class="article">
+    <h1><%= @article.title %>
+    <%= link_to(edit_article_path) do %>
+      <i class="fas fa-pencil-alt"></i>
+    <% end %>
+    <%= link_to article_path, method: :delete, data: { confirm: "Are you sure?" } do %>
+      <i class="fas fa-trash"></i>
+    <% end %>
+    </h1>
+    <p><%= @article.content %></p>
+  </div>
+</div>
